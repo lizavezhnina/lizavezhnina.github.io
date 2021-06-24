@@ -76,24 +76,26 @@ export function move(state, i, j)
         return state
 }
 
-export function goTest(state)
+export function goalTest(state)
 {
     const goalState = [
-        [1, 2, 3],
-        [4, 5 , 6],
-        [7, 8, 0]]
-        return is_equal(goalState, state)
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 0]]
+    return is_equal(goalState, state)
 }
 
 function is_equal(s1, s2)
 {
-    for (let i = 0; i < 3; i++)
+    for(let i = 0; i < 3; i++)
     {
-       for (let j = 0; j < 3; j++)
+        for(let j = 0; j < 3; j++)
         {
             if(s1[i][j] !== s2[i][j])
-            return false
+             return false
         }
+
     }
     return true
+
 }
